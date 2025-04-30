@@ -2,7 +2,7 @@
 let humanChoice = parseInt(prompt("selecciona 1 para piedra, 2 para papel y 3 para tijera" ));
 
 function getHumanChoice () { 
-  return humanChoice ;
+  return (humanChoice);
 }
 if (humanChoice == 1) {
   console.log("Ha elegido Piedra");
@@ -37,20 +37,20 @@ let computerScore = 0;
   function playRound (HumanScore, computerScore) {
     return console.log("Tu puntuación es " + HumanScore  + " y la computadora " + computerScore);
   }
-  const humanSelec = getHumanChoice ();
-  const computerSelec = getComputerChoice ();
-  playRound (humanSelec, computerSelec);
+  
+  
 
   if (humanChoice === 1 && computerChoice === 3) {
-    HumanScore = HumanScore ++;
+    HumanScore = HumanScore +1;
     console.log("Ganaste");
+    console.log(HumanScore);
   }
   else if (humanChoice === 2 && computerChoice === 1) {
-    HumanScore = HumanScore ++;
+    HumanScore = HumanScore +1;
     console.log("Ganaste");
   }
   else if (humanChoice === 3 && computerChoice === 2) {
-    HumanScore = HumanScore ++;
+    HumanScore = HumanScore +1;
     console.log("ganaste");
   }
   else if (humanChoice === computerChoice) {
@@ -59,8 +59,9 @@ let computerScore = 0;
     console.log("Empate");
   }
   else {
-    computerScore = computerScore ++;
+    computerScore = computerScore +1;
     console.log("Perdiste");
   }
+  playRound (HumanScore, computerScore);
   
   //bucle//
