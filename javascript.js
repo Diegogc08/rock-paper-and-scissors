@@ -1,14 +1,44 @@
+//elección de jugador//
+let humanChoice = parseInt(prompt("selecciona 1 para piedra, 2 para papel y 3 para tijera" ));
+
+function getHumanChoice () { 
+  return humanChoice ();
+}
+if (humanChoice == 1) {
+  console.log("Ha elegido Piedra");
+}
+if (humanChoice == 2) {
+  console.log("Ha elegido Papel")
+}
+if (humanChoice == 3) {
+  console.log("Ha elegido Tijera")
+}
+//______________________________________//
+
+//elección de computadora//
 function getComputerChoice() {
     return Math.floor(Math.random() * 3) + 1;
   }
   
-  let numero = getComputerChoice();
-  if (numero == 1) {
-    console.log("rock");
+  let computerChoice = getComputerChoice();
+  if (computerChoice == 1) {
+    console.log("Comp eligió Piedra");
   }
-  if (numero == 2) {
-    console.log("paper");
+  if (computerChoice == 2) {
+    console.log("Comp eligió Papel");
   }
-  if (numero == 3) {
-    console.log("scissors");
+  if (computerChoice == 3) {
+    console.log("Comp eligió Tijera");
   }
+//__________________________________________//
+let HumanScore = 0;
+let computerScore = 0; 
+
+  function playRound (Hchoice, Cchoice) {
+  
+  }
+  const humanSelec = getComputerChoice ();
+  const computerSelec = getComputerChoice ();
+  playRound (humanSelec, computerSelec);
+  
+  //bucle//
